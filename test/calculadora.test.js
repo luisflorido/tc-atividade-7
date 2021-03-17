@@ -27,4 +27,18 @@ describe('Testa classe calculadora de salário', () => {
         expect(calcSalario).toBe(3200)
     })
 
+    describe('DESENVOLVEDOR salario menor que 3000', () => {
+        const funcionario = {
+            nome: 'Teste',
+            email: 'teste@gmail.com',
+            salarioBase: 2000,
+            cargo: 'DESENVOLVEDOR',
+        }
+        const errors = funcionarioSchema.validate(funcionario);
+
+        expect(errors).toHaveLength(0);
+
+        const calcSalario = calculadora.calcularSalario(funcionario)
+        expect(calcSalario).toBe(1800)
+    })
 })
