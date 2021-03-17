@@ -1,0 +1,13 @@
+{
+  "name": "tc-atividade-7",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "validate": "^5.1.0"
+  }
+}
