@@ -41,4 +41,19 @@ describe('Testa classe calculadora de salário', () => {
         const calcSalario = calculadora.calcularSalario(funcionario)
         expect(calcSalario).toBe(1800)
     })
+
+    describe('DBA salario maior que 2000', () => {
+        const funcionario = {
+            nome: 'Teste',
+            email: 'teste@gmail.com',
+            salarioBase: 3000,
+            cargo: 'DBA',
+        }
+        const errors = funcionarioSchema.validate(funcionario);
+
+        expect(errors).toHaveLength(0);
+
+        const calcSalario = calculadora.calcularSalario(funcionario)
+        expect(calcSalario).toBe(2250)
+    })
 })
