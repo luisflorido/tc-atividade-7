@@ -12,7 +12,7 @@ const funcionarioSchema = new Schema({
 
 describe('Testa classe calculadora de salário', () => {
     
-    describe('DESENVOLVEDOR salario maior que 3000', () => {
+    test('DESENVOLVEDOR salario maior que 3000', () => {
         const funcionario = {
             nome: 'Teste',
             email: 'teste@gmail.com',
@@ -27,7 +27,7 @@ describe('Testa classe calculadora de salário', () => {
         expect(calcSalario).toBe(3200)
     })
 
-    describe('DESENVOLVEDOR salario menor que 3000', () => {
+    test('DESENVOLVEDOR salario menor que 3000', () => {
         const funcionario = {
             nome: 'Teste',
             email: 'teste@gmail.com',
@@ -42,7 +42,7 @@ describe('Testa classe calculadora de salário', () => {
         expect(calcSalario).toBe(1800)
     })
 
-    describe('DBA salario maior que 2000', () => {
+    test('DBA salario maior que 2000', () => {
         const funcionario = {
             nome: 'Teste',
             email: 'teste@gmail.com',
@@ -57,7 +57,7 @@ describe('Testa classe calculadora de salário', () => {
         expect(calcSalario).toBe(2250)
     })
 
-    describe('DBA salario menor que 2000', () => {
+    test('DBA salario menor que 2000', () => {
         const funcionario = {
             nome: 'Teste',
             email: 'teste@gmail.com',
@@ -72,7 +72,7 @@ describe('Testa classe calculadora de salário', () => {
         expect(calcSalario).toBe(1275)
     })
 
-    describe('TESTADOR salario maior que 2000', () => {
+    test('TESTADOR salario maior que 2000', () => {
         const funcionario = {
             nome: 'Teste',
             email: 'teste@gmail.com',
@@ -87,7 +87,7 @@ describe('Testa classe calculadora de salário', () => {
         expect(calcSalario).toBe(1875)
     })
 
-    describe('TESTADOR salario menor que 2000', () => {
+    test('TESTADOR salario menor que 2000', () => {
         const funcionario = {
             nome: 'Teste',
             email: 'teste@gmail.com',
@@ -102,7 +102,7 @@ describe('Testa classe calculadora de salário', () => {
         expect(calcSalario).toBe(850)
     })
 
-    describe('GERENTE salario maior que 5000', () => {
+    test('GERENTE salario maior que 5000', () => {
         const funcionario = {
             nome: 'Teste',
             email: 'teste@gmail.com',
@@ -117,7 +117,7 @@ describe('Testa classe calculadora de salário', () => {
         expect(calcSalario).toBe(4200)
     })
     
-    describe('GERENTE salario menor que 5000', () => {
+    test('GERENTE salario menor que 5000', () => {
         const funcionario = {
             nome: 'Teste',
             email: 'teste@gmail.com',
